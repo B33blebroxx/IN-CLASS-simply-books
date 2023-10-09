@@ -21,10 +21,9 @@ const deleteBook = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    }, 
-  })
-    .then((response) => response.json())
-    .then((data) => resolve((data)))
+    },
+  }).then((response) => response.json())
+    .then(resolve)
     .catch(reject);
 });
 
@@ -34,7 +33,7 @@ const getSingleBook = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-    }, 
+    },
   })
     .then((response) => response.json())
     .then((data) => resolve(data))
@@ -47,10 +46,9 @@ const createBook = (payload) => new Promise((resolve, reject) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-    }, 
-    body: JSON.stringify(payload)
-  })
-    .then((response) => response.json())
+    },
+    body: JSON.stringify(payload),
+  }).then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
 });
@@ -61,10 +59,9 @@ const updateBook = (payload) => new Promise((resolve, reject) => {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-    }, 
-    body: JSON.stringify(payload)
-  })
-    .then((response) => response.json())
+    },
+    body: JSON.stringify(payload),
+  }).then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
 });
@@ -74,7 +71,7 @@ const getBooksByAuthor = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-    }, 
+    },
   })
     .then((response) => response.json())
     .then((data) => resolve(Object.values(data)))
@@ -103,5 +100,5 @@ export {
   deleteBook,
   getSingleBook,
   updateBook,
-  getBooksByAuthor
+  getBooksByAuthor,
 };
