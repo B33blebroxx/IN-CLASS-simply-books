@@ -16,7 +16,7 @@ export default function AuthorCards() {
 
   useEffect(() => {
     getAllAuthors();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -29,7 +29,6 @@ export default function AuthorCards() {
           <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllAuthors} />
         ))}
       </div>
-
     </div>
   );
 }
