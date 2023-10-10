@@ -15,8 +15,8 @@ function AuthorCard({ authorObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
-      <Card.Img variant="top" src={authorObj.image} alt={authorObj.first_name} style={{ height: '400px' }} />
+    <Card style={{ width: '16rem', margin: '10px' }}>
+      <Card.Img variant="top" src={authorObj.image} alt={authorObj.first_name} style={{ height: '275px' }} />
       <Card.Body>
         <Card.Title>
           {authorObj.first_name} {authorObj.last_name}
