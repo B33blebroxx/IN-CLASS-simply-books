@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
@@ -35,14 +36,13 @@ export default function ViewAuthor() {
         <h5>
           {authorDetails?.first_name} {authorDetails?.last_name}
         </h5>
-        Author Email: <a href={`mailto:${authorDetails.email}`}>{authorDetails.email}</a>
+        Author Email: <a href={`mailto:${authorDetails.email}`}>{authorDetails.email}<br /></a>
         <p>{authorDetails.description || ''}</p>
       </div>
       <div id="auth-book-card">
         {authorDetails.books?.map((book) => (
           <BookCard key={book.firebaseKey} bookObj={book} onUpdate={getAuthDetails} />
         ))}
-        ;
       </div>
     </div>
   );
