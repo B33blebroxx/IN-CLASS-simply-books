@@ -8,8 +8,3 @@ body {
   border-radius: 50%;
   width: 30px;
 }
-
-#auth-book-card {
-  display: flex;
-  align-content: flex-end;
-}

@@ -39,7 +39,7 @@ const getBookDetails = (firebaseKey) => new Promise((resolve, reject) => {
 
 const getAuthorDetails = async (firebaseKey) => {
   const author = await getSingleAuthor(firebaseKey);
-  const books = await getAuthorBooks(author.firebaseKey);
+  const books = await getAuthorBooks(author?.firebaseKey);
 
   return { ...author, books };
 };
