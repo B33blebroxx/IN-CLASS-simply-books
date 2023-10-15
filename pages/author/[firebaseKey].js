@@ -18,11 +18,6 @@ export default function ViewAuthor() {
     getAuthorDetails(firebaseKey).then(setAuthorDetails);
   };
 
-  // // TODO: make call to API layer to get the data
-  // useEffect(() => {
-  //   viewBookDetails(firebaseKey).then(setBookDetails);
-  // }, [firebaseKey]);
-
   useEffect(() => {
     getAuthDetails();
   }, []);
