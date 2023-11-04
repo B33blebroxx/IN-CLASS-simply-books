@@ -48,22 +48,12 @@ const getOrderDetails = async (orderId) => {
 
 // GET BOOKS NOT RELATED TO AN ORDER
 const getBooksNotInTheOrder = async (uid, orderId) => {
-  // GET ALL THE BOOKS
   const allBooks = await getBooks(uid);
-
-  // GET ALL THE ORDERBOOKS RELATES TO THE ORDER
   const orderBooks = await getOrderBooks(orderId);
-
-  // GET THE BOOKS FOUND IN THE ORDER BOOKS, RETURNS AN ARRAY OF PROMISES
   const bookPromises = await orderBooks.map((orderBook) => getSingleBook(orderBook.bookId));
-
-  // MOST USE PROMISE.ALL() TO RETURN EACH BOOK OBJECT
   const books = await Promise.all(bookPromises);
-
-  // FILTER AND COMPARE THE TWO ARRAYS OF ALL BOOKS AND ALL ORDERBOOKS
   const filterBooks = await allBooks.filter((obj) => !books.some((e) => e.firebaseKey === obj.firebaseKey));
 
-  // ONLY RETURN THE BOOKS NOT RELATED TO ORDER
   return filterBooks;
 };
 
