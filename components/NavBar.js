@@ -19,7 +19,7 @@ export default function NavBar() {
         <Navbar.Collapse className="justify-content-end">
           <Nav className="ml-auto">
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Home!</Nav.Link>
             </Link>
             <Link passHref href="/books">
               <Nav.Link>Books</Nav.Link>
