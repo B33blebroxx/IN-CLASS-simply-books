@@ -25,7 +25,7 @@ ___
 ### If you see this, you are set to go!
 <img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
 
-
+aaaaaaaaaaa
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 **NOTES:** 
